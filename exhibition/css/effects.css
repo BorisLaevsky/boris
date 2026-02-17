@@ -1,0 +1,62 @@
+#friend-text {
+  margin-left: 12px;
+}
+
+#friend-bubble {
+  display: inline-flex;
+  align-items: flex-start;
+  background-color: #f5f5f5;
+  border-radius: 12px;
+  padding: 8px 12px;
+  max-width: 300px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+#friend-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 8px;
+  object-fit: cover;
+}
+
+#friend-bubble-text {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #333;
+}
+
+#screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+#room-image img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 16px; /* spacing to title */
+}
+
+#room-title {
+  margin: 8px 0;
+  font-size: 24px;
+  text-align: center;
+}
+
+#room-text {
+  margin: 8px 0 16px 0;
+  font-size: 16px;
+  text-align: center;
+  white-space: pre-wrap; /* so line breaks from JSON are preserved */
+}
+
+#options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+

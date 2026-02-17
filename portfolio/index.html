@@ -2,51 +2,154 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>boris — portfolio</title>
+  <title>Boris — Works</title>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Portfolio styles -->
-  <link rel="stylesheet" href="portfolio.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header class="site-header">
-    <h1>boris</h1>
+  <div class="container">
 
-    <nav class="main-nav">
-      <a href="#works">Works</a>
-      <a href="#cv">CV</a>
-      <a href="#text">Text</a>
-      <a href="#contact">Contact</a>
+    <nav class="menu">
+      <h1>BORIS</h1>
+
+      <ul>
+        <li class="section">WORKS</li>
+        <li><a data-target="group1" data-color="#0033ff" class="active">GROUP I</a></li>
+        <li><a data-target="group2" data-color="#008855">GROUP II</a></li> 
+        <li><a data-target="group3" data-color="#880044">GROUP III</a></li>
+
+        <li class="section">TEXTS</li>
+        <li><a data-target="texts">Texts</a></li>
+
+        <li class="section">CV</li>
+        <li><a data-target="cv">CV</a></li>
+
+        <li class="section">INFO</li>
+        <li><a data-target="info">Info</a></li>
+      </ul>
     </nav>
-  </header>
 
-  <!-- CONTENT -->
-  <main class="content">
+    <main class="content">
 
-    <section id="works">
-      <h2>Works</h2>
-      <!-- grid of works later -->
-    </section>
+      <!-- GROUP I -->
+      <section id="group1" class="panel active">
 
-    <section id="cv">
-      <h2>CV</h2>
-      <!-- CV text -->
-    </section>
+        <div class="work">
+          <img src="works/group1/1.jpg" alt="">
+          <div class="meta">
+            Untitled<br>
+            2023<br>
+            Graphite on paper<br>
+            56 × 70 cm
+          </div>
+        </div>
 
-    <section id="text">
-      <h2>Text</h2>
-      <!-- statements / writing -->
-    </section>
+        <div class="work">
+          <img src="works/group1/2.jpg" alt="">
+          <div class="meta">
+            Untitled<br>
+            2025<br>
+            Graphite on paper<br>
+            56 × 70 cm
+          </div>
+        </div>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <!-- email, etc -->
-    </section>
+        <div class="work">
+          <img src="works/group1/3.jpg" alt="">
+          <div class="meta">
+            Untitled<br>
+            2025<br>
+            Graphite on paper<br>
+            56 × 70 cm
+          </div>
+        </div>
 
-  </main>
+        <div class="work">
+          <img src="works/group1/4.jpg" alt="">
+          <div class="meta">
+            Untitled<br>
+            2025<br>
+            Graphite on paper<br>
+            56 × 70 cm
+          </div>
+        </div>
 
+      </section>
+
+      <!-- GROUP II -->
+      <section id="group2" class="panel">
+
+        <div class="work">
+          <img src="works/group2/1.jpg" alt="">
+          <div class="meta">
+            Untitled<br>
+            2025<br>
+            Graphite on paper<br>
+            56 × 70 cm
+          </div>
+        </div>
+
+        <div class="work">
+          <img src="works/group2/2.jpg" alt="">
+          <div class="meta">
+            Untitled<br>
+            2025<br>
+            Graphite on paper<br>
+            56 × 70 cm
+          </div>
+        </div>
+
+        <div class="work">
+          <img src="works/group2/3.jpg" alt="">
+          <div class="meta">
+            Untitled<br>
+            2025<br>
+            Graphite on paper<br>
+            56 × 70 cm
+          </div>
+        </div>
+
+        <div class="work">
+          <img src="works/group2/4.jpg" alt="">
+          <div class="meta">
+            Untitled<br>
+            2025<br>
+            Graphite on paper<br>
+            56 × 70 cm
+          </div>
+        </div>
+
+      </section>
+
+      <!-- GROUP III -->
+      <section id="group3" class="panel">
+        <!-- works -->
+      </section>
+
+      <section id="texts" class="panel">
+        <p>Text title, year</p>
+      </section>
+
+      <section id="cv" class="panel">
+        <p>Education, exhibitions, awards.</p>
+      </section>
+
+      <section id="info" class="panel">
+        <p>
+          Boris Laevsky<br>
+          Vienna<br>
+          email@example.com
+        </p>
+      </section>
+
+    </main>
+
+  </div>
+
+  <script src="toggle.js"></script>
 </body>
 </html>
