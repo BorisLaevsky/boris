@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Chaotic Good</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="chaotic-good.css">
+</head>
+
+<body>
+
+<!-- SCORE -->
+<div id="score">
+  beers: <span id="beer-count">0</span><br>
+  lines: <span id="line-count">0</span>
+</div>
+
+<!-- =====================
+     WORK 01
+===================== -->
+
+<div class="group active" id="w1-direct">
+  <p>You arrive.</p>
+  <img class="work-image"
+       data-ascii="images/w1-ascii.png"
+       data-real="images/w1.jpg"
+       src="images/w1-ascii.png">
+  <nav class="choices">
+    <a onclick="drinkBeer()">Drink a beer</a>
+    <a onclick="doLine()">Do a line</a>
+    <a onclick="goTo('w1-close')">Stand closer</a>
+    <a onclick="goTo('w2-direct')">Move on</a>
+  </nav>
+</div>
+
+<div class="group" id="w1-close">
+  <p>Up close, it refuses to stay whole.</p>
+  <img class="work-image"
+       data-ascii="images/w1-ascii.png"
+       data-real="images/w1.jpg">
+  <nav class="choices">
+    <a onclick="drinkBeer()">Another beer</a>
+    <a onclick="doLine()">Escalate the evening</a>
+    <a onclick="goTo('w1-return')">Step back</a>
+    <a onclick="goTo('w3-direct')">Get distracted</a>
+  </nav>
+</div>
+
+<div class="group" id="w1-return">
+  <p>You return, already carrying opinions.</p>
+  <img class="work-image"
+       data-ascii="images/w1-ascii.png"
+       data-real="images/w1.jpg">
+  <nav class="choices">
+    <a onclick="goTo('w2-direct')">Continue</a>
+  </nav>
+</div>
+
+<!-- =====================
+     WORK 02
+===================== -->
+
+<div class="group" id="w2-direct">
+  <p>This work seems to demand context.</p>
+  <img class="work-image"
+       data-ascii="images/w2-ascii.png"
+       data-real="images/w2.jpg">
+  <nav class="choices">
+    <a onclick="drinkBeer()">Drink a beer</a>
+    <a onclick="doLine()">Escalate the evening</a>
+    <a onclick="goTo('w2-overheard')">Listen nearby</a>
+    <a onclick="goTo('w1-direct')">Pretend you just arrived</a>
+  </nav>
+</div>
+
+<div class="group" id="w2-overheard">
+  <p>Someone explains it confidently.</p>
+  <img class="work-image"
+       data-ascii="images/w2-ascii.png"
+       data-real="images/w2.jpg">
+  <nav class="choices">
+    <a onclick="goTo('w2-return')">Look again</a>
+    <a onclick="goTo('w4-direct')">Follow the voice</a>
+  </nav>
+</div>
+
+<div class="group" id="w2-return">
+  <p>You’re no longer sure which thoughts are yours.</p>
+  <img class="work-image"
+       data-ascii="images/w2-ascii.png"
+       data-real="images/w2.jpg">
+  <nav class="choices">
+    <a onclick="goTo('w3-direct')">Drift</a>
+  </nav>
+</div>
+
+<!-- =====================
+     WORK 03
+===================== -->
+
+<div class="group" id="w3-direct">
+  <p>This one could be missed entirely.</p>
+  <img class="work-image"
+       data-ascii="images/w3-ascii.png"
+       data-real="images/w3.jpg">
+  <nav class="choices">
+    <a onclick="drinkBeer()">Drink a beer</a>
+    <a onclick="doLine()">Escalate the evening</a>
+    <a onclick="goTo('w3-linger')">Stay longer</a>
+    <a onclick="goTo('w2-direct')">Compare</a>
+  </nav>
+</div>
+
+<div class="group" id="w3-linger">
+  <p>You stay. Nothing announces itself.</p>
+  <img class="work-image"
+       data-ascii="images/w3-ascii.png"
+       data-real="images/w3.jpg">
+  <nav class="choices">
+    <a onclick="goTo('w3-return')">Later</a>
+  </nav>
+</div>
+
+<div class="group" id="w3-return">
+  <p>You come back, slightly altered.</p>
+  <img class="work-image"
+       data-ascii="images/w3-ascii.png"
+       data-real="images/w3.jpg">
+  <nav class="choices">
+    <a onclick="goTo('w5-direct')">Seek quiet</a>
+  </nav>
+</div>
+
+<!-- =====================
+     WORK 04
+===================== -->
+
+<div class="group" id="w4-direct">
+  <p>This one attracts people.</p>
+  <img class="work-image"
+       data-ascii="images/w4-ascii.png"
+       data-real="images/w4.jpg">
+  <nav class="choices">
+    <a onclick="drinkBeer()">Accept a drink</a>
+    <a onclick="doLine()">Escalate the evening</a>
+    <a onclick="goTo('w4-social')">Stay in the crowd</a>
+    <a onclick="goTo('w2-direct')">Escape</a>
+  </nav>
+</div>
+
+<div class="group" id="w4-social">
+  <p>The work becomes background.</p>
+  <img class="work-image"
+       data-ascii="images/w4-ascii.png"
+       data-real="images/w4.jpg">
+  <nav class="choices">
+    <a onclick="goTo('w4-return')">Refocus</a>
+  </nav>
+</div>
+
+<div class="group" id="w4-return">
+  <p>You’re not sure you saw it.</p>
+  <img class="work-image"
+       data-ascii="images/w4-ascii.png"
+       data-real="images/w4.jpg">
+  <nav class="choices">
+    <a onclick="goTo('w6-direct')">Feel tired</a>
+  </nav>
+</div>
+
+<!-- =====================
+     WORK 05
+===================== -->
+
+<div class="group" id="w5-direct">
+  <p>This work doesn’t perform.</p>
+  <img class="work-image"
+       data-ascii="images/w5-ascii.png"
+       data-real="images/w5.jpg">
+  <nav class="choices">
+    <a onclick="drinkBeer()">Drink quietly</a>
+    <a onclick="goTo('w5-quiet')">Stay</a>
+  </nav>
+</div>
+
+<div class="group" id="w5-quiet">
+  <p>Nothing competes for your attention.</p>
+  <img class="work-image"
+       data-ascii="images/w5-ascii.png"
+       data-real="images/w5.jpg">
+  <nav class="choices">
+    <a onclick="goTo('w5-return')">Eventually</a>
+  </nav>
+</div>
+
+<div class="group" id="w5-return">
+  <p>You hesitate before leaving.</p>
+  <img class="work-image"
+       data-ascii="images/w5-ascii.png"
+       data-real="images/w5.jpg">
+  <nav class="choices">
+    <a onclick="goTo('w6-direct')">Go</a>
+  </nav>
+</div>
+
+<!-- =====================
+     WORK 06
+===================== -->
+
+<div class="group" id="w6-direct">
+  <p>You feel like you’ve seen enough.</p>
+  <img class="work-image"
+       data-ascii="images/w6-ascii.png"
+       data-real="images/w6.jpg">
+  <nav class="choices">
+    <a onclick="drinkBeer()">One more</a>
+    <a onclick="doLine()">Escalate the evening</a>
+    <a onclick="goTo('w6-fatigue')">Linger anyway</a>
+  </nav>
+</div>
+
+<div class="group" id="w6-fatigue">
+  <p>The works blur together.</p>
+  <img class="work-image"
+       data-ascii="images/w6-ascii.png"
+       data-real="images/w6.jpg">
+  <nav class="choices">
+    <a onclick="goTo('w6-nonend')">Try to leave</a>
+  </nav>
+</div>
+
+<div class="group" id="w6-nonend">
+  <p>This is not the exit.</p>
+  <img class="work-image"
+       data-ascii="images/w6-ascii.png"
+       data-real="images/w6.jpg">
+  <nav class="choices">
+    <a onclick="goTo('w1-direct')">Re-enter</a>
+  </nav>
+</div>
+
+<script src="chaotic-good.js"></script>
+</body>
+</html>
