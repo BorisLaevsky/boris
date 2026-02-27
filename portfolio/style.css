@@ -144,3 +144,52 @@ a {
     margin-left: 0;
   }
 }
+
+/* =============================
+   CHAT
+============================= */
+
+.chat-container {
+  max-width: 520px;
+}
+
+.chat-messages {
+  border: 1px solid #ddd;
+  padding: 12px;
+  height: 300px;
+  overflow-y: auto;
+  font-size: 12px;
+  margin-bottom: 12px;
+}
+
+.chat-messages .message {
+  margin-bottom: 8px;
+}
+
+.chat-messages .message span.name {
+  font-weight: bold;
+  margin-right: 4px;
+}
+
+.chat-form {
+  display: flex;
+  gap: 8px;
+}
+
+.chat-form input[type="text"] {
+  flex: 1;
+  padding: 4px 6px;
+  font-size: 12px;
+}
+
+.chat-form button {
+  padding: 4px 8px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* optional: add spacing in menu for visual separation */
+.menu-separator {
+  height: 16px; /* vertical gap */
+  pointer-events: none; /* not clickable */
+}

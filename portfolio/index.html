@@ -17,7 +17,9 @@
     <ul>
       <li><a data-target="group1" class="active">GROUP I</a></li>
       <li><a data-target="group2">GROUP II</a></li>
-
+      <li class="menu-separator"></li> <!-- optional visual gap -->
+      <li><a data-target="chat">CHAT</a></li>
+      <li class="menu-separator"></li>
       <li class="section"></li>
 
       <li><a data-target="cv">CV</a></li>
@@ -193,6 +195,23 @@
       </div>
 
     </section>
+
+<!-- CHAT -->
+<section id="chat" class="panel">
+
+  <div class="chat-container">
+    <div id="messages" class="chat-messages">
+      <!-- messages will appear here -->
+    </div>
+
+    <form id="chat-form" class="chat-form">
+      <input type="text" id="chat-name" placeholder="Your name" required>
+      <input type="text" id="chat-text" placeholder="Your message" required>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+</section>
 
     <!-- CV -->
     <section id="cv" class="panel">
