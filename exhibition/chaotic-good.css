@@ -1,94 +1,177 @@
-/* ===== Base ===== */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Georgia, serif;
-  background: #fff;
-  color: #000;
+/* ======================
+   BASE
+====================== */
+
+body{
+margin:0;
+font-family:Georgia,serif;
+background:white;
+color:black;
 }
 
-img {
-  display: block;
-  width: 100%;
-  vertical-align: top;
+img{
+max-width:100%;
+height:auto;
+display:block;
 }
 
-/* ===== Groups ===== */
-.group {
-  display: none;
-  padding: 4rem 6vw;
-  max-width: 900px;
+/* ======================
+   CENTERED COLUMN
+====================== */
+
+.group{
+display:none;
+margin:0 auto;
+max-width:620px;
+width:100%;
+padding:3rem 6vw;
+box-sizing:border-box;
+position:relative;
+}
+.group.active{
+display:block;
 }
 
-.group.active {
-  display: block;
+/* ======================
+   TEXT
+====================== */
+
+p{
+line-height:1.6;
+font-size:1.05rem;
+margin:0 0 1rem 0;
 }
 
-/* ===== Text ===== */
-.group p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  max-width: 620px;
+.dialogue{
+white-space:pre-line;
 }
 
-/* ===== Choices ===== */
-.choices {
-  margin-top: 3rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
+/* ======================
+   IMAGES
+====================== */
+
+.image-stack{
+position:relative;
+margin:2rem 0;
+width:100%;
+max-width:620px;
 }
 
-.choices a {
-  text-decoration: none;
-  color: #000;
-  cursor: pointer;
-  font-size: 0.95rem;
-  width: fit-content;
-  border-bottom: 1px solid transparent;
+/* ascii overlay */
+
+.ascii{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+z-index:2;
+pointer-events:none;
+
+mix-blend-mode:multiply;
+opacity:0.9;
 }
 
-.choices a:hover {
-  border-bottom: 1px solid #000;
+/* real image */
+
+.real{
+position:relative;
+z-index:1;
 }
 
-/* ===== Score ===== */
-#score {
-  position: fixed;
-  top: 1rem;
-  right: 1.5rem;
-  font-size: 0.9rem;
-  line-height: 1.4;
-  opacity: 0.6;
+/* ======================
+   CHOICES
+====================== */
+
+.choices{
+margin-top:2rem;
+display:flex;
+flex-direction:column;
+gap:0.6rem;
 }
 
-/* ===== Image Stack ===== */
-.image-stack {
-  position: relative;
-  width: 100%;
-  max-width: 800px;
-  margin: 2rem 0;
-  overflow: hidden;
+.choices a{
+cursor:pointer;
+text-decoration:underline;
+font-size:0.95rem;
+color:black;
+width:fit-content;
 }
 
-/* ASCII layer (default reality) */
-.image-stack .ascii {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  opacity: 1;
-  transition:
-    opacity 0.6s ease,
-    filter 0.6s ease,
-    transform 0.6s ease;
+.choices a:hover{
+opacity:0.7;
 }
 
-/* Real image (hidden at start) */
-.image-stack .real {
-  position: relative;
-  z-index: 1;
-  opacity: 0;
-  transition:
-    opacity 0.6s ease,
-    filter 0.6s ease;
+.beer-button{
+margin-top:1.2rem;
+margin-bottom:0.6rem;
+}
+
+/* remove browser double underline */
+
+a{
+text-decoration:underline;
+}
+
+/* ======================
+   SCORE
+====================== */
+
+#score{
+position:absolute;
+top:1rem;
+right:1rem;
+font-size:0.9rem;
+opacity:0.6;
+}
+
+/* ======================
+   OPENING PAGE
+====================== */
+
+.opening-layout{
+display:flex;
+flex-direction:column;
+gap:2rem;
+}
+
+/* window gif */
+
+.opening-gif{
+width:120px;
+max-width:30vw;
+align-self:flex-end;
+border:2px solid black;
+}
+
+/* ======================
+   MOBILE
+====================== */
+
+@media (max-width:600px){
+
+.group{
+padding:2rem 5vw;
+}
+
+p{
+font-size:1rem;
+}
+
+.choices a{
+font-size:1rem;
+}
+
+#score{
+font-size:0.8rem;
+}
+
+.opening-gif{
+width:90px;
+}
+
+}
+
+.beer-button{
+margin-top:1.2rem;
+margin-bottom:0.6rem;
 }

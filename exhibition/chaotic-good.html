@@ -9,70 +9,289 @@
 
 <body>
 
-<!-- SCORE -->
 <div id="score">
-  beers: <span id="beer-count">0</span><br>
-  lines: <span id="line-count">0</span>
+beers: <span id="beer-count">0</span>
 </div>
 
 <!-- =====================
-     WORK 01 — DIRECT
+     OPENING
 ===================== -->
 
-<div class="group active" id="w1-direct">
-  <p>You arrive.</p>
+<div class="group active" id="start">
 
-  <div class="image-stack">
-    <img class="ascii" src="images/w1-ascii.png" alt="">
-    <img class="real"  src="images/w1.jpg" alt="">
+  <div class="opening-layout">
+
+    <img class="opening-gif" src="images/wind.gif" alt="">
+
+    <nav class="choices">
+      <a onclick="goTo('entrance')">
+      You wake up at 13:00 on Tuesday. After laying around all day you left the house to go see the exhibition.
+      </a>
+    </nav>
+
   </div>
 
-  <nav class="choices">
-    <a onclick="drinkBeer()">Drink a beer</a>
-    <a onclick="doLine()">Do a line</a>
-    <a onclick="goTo('w1-close')">Stand closer</a>
-    <a onclick="goTo('w2-direct')">Move on</a>
-  </nav>
 </div>
 
-<!-- =====================
-     WORK 01 — CLOSE
-===================== -->
+
+<!-- ENTRANCE -->
+<div class="group" id="entrance">
+
+<body>
+
+<p>
+The crowd is piled up outside of the entrance.  
+You see a few familiar faces. The usuals.
+</p>
+
+<nav class="choices">
+<a onclick="goTo('friend')">Say hello to a friend</a>
+<a onclick="goTo('w1')">Go see the works</a>
+<a onclick="goTo('toilet')">Go to the toilet</a>
+</nav>
+
+</div>
+
+
+<!-- FRIEND -->
+<div class="group" id="friend">
+
+<p class="dialogue">
+“Something crazy happened last night…  
+I was watching my favorite silent movie and kept dozing off like every ten minutes.  
+Instead of falling asleep I kept watching the movie but like inside my dreams.”
+</p>
+
+<nav class="choices">
+<a onclick="goTo('entrance')">&gt; omg Happened to me too!!</a>
+</nav>
+
+</div>
+
+
+<!-- TOILET -->
+<div class="group" id="toilet">
+
+<p>
+Two people are in front of you talking.  
+You wait in line.
+</p>
+
+<nav class="choices">
+<a onclick="goTo('toilet1')">Eavesdrop</a>
+</nav>
+
+</div>
+
+
+<div class="group" id="toilet1">
+
+<p class="dialogue">
+- Hey brah, how are you doing man?<br>
+- Alright.<br>
+- It's been a while man. Life's so rad.<br>
+This artist is my favorite man, don't you love him?<br>
+- Yeah.<br>
+- Aw man you want a beer?<br>
+- Alright.<br>
+- Hell brah this is the best man.  
+I'm so glad we're all back together.<br>
+- Yeah.<br>
+- Hey did you hear about the party after the show?<br>
+- Yeah.<br>
+- It's gonna be the best man.  
+Take it easy brah.
+</p>
+
+<nav class="choices">
+<a onclick="goTo('toilet2')">Eavesdrop more</a>
+</nav>
+
+</div>
+
+
+<div class="group" id="toilet2">
+
+<p class="dialogue">
+Your eavesdropping is interrupted by someone you've met around a few times.  
+“Hey, what's up?”
+</p>
+
+<nav class="choices">
+<a onclick="goTo('toilet3')">&gt; Not much</a>
+</nav>
+
+</div>
+
+
+<div class="group" id="toilet3">
+
+<p class="dialogue">
+“Did you hear about the party?”
+</p>
+
+<nav class="choices">
+<a onclick="goTo('toilet4')">&gt; Yeah</a>
+</nav>
+
+</div>
+
+
+<div class="group" id="toilet4">
+
+<p class="dialogue">
+“I think I'm gonna go.  
+My friends don't really want to go though.  
+Could I get a ride?”
+</p>
+
+<nav class="choices">
+<a onclick="goTo('entrance')">&gt; Yeah, I guess</a>
+</nav>
+
+</div>
+
+
+<!-- WORK 1 -->
+<div class="group" id="w1">
+
+<body>
+
+
+<p>Whatever... lets start with this one, It catches my eye first</p>
+
+<div class="image-stack">
+<img class="ascii" src="images/w1-ascii.png">
+<img class="real" src="images/w1.jpg">
+</div>
+
+<nav class="choices">
+<a class="beer-button" onclick="drinkBeer()">Drink a beer</a><a onclick="goTo('w1-close')">Look closer</a>
+<a onclick="goTo('w2')">Move to the next work</a>
+</nav>
+
+</div>
+
 
 <div class="group" id="w1-close">
-  <p>Up close, it refuses to stay whole.</p>
 
-  <div class="image-stack">
-    <img class="ascii" src="images/w1-ascii.png" alt="">
-    <img class="real"  src="images/w1.jpg" alt="">
-  </div>
-
-  <nav class="choices">
-    <a onclick="drinkBeer()">Another beer</a>
-    <a onclick="doLine()">Escalate the evening</a>
-    <a onclick="goTo('w1-direct')">Step back</a>
-  </nav>
+<p>Always good to see some texture upclose</p>
+<div class="image-stack">
+<img class="ascii" src="images/w1-close-ascii.png">
+<img class="real" src="images/w1-close.jpg">
 </div>
 
-<!-- =====================
-     WORK 02
-===================== -->
+<nav class="choices">
+<a class="beer-button" onclick="drinkBeer()">Drink a beer</a>
+<a onclick="goTo('w1')">Step away</a>
+</nav>
 
-<div class="group" id="w2-direct">
-  <p>This work seems to demand context.</p>
+</div>
 
-  <div class="image-stack">
-    <img class="ascii" src="images/w2-ascii.png" alt="">
-    <img class="real"  src="images/w2.jpg" alt="">
-  </div>
 
-  <nav class="choices">
-    <a onclick="drinkBeer()">Drink a beer</a>
-    <a onclick="doLine()">Escalate the evening</a>
-    <a onclick="goTo('w1-direct')">Pretend you just arrived</a>
-  </nav>
+<!-- WORK 2 -->
+<div class="group" id="w2">
+
+<p>hm... ok</p>
+
+<div class="image-stack">
+<img class="ascii" src="images/w2-ascii.png">
+<img class="real" src="images/w2.jpg">
+</div>
+
+<nav class="choices">
+<a class="beer-button" onclick="drinkBeer()">Drink a beer</a>
+<a onclick="goTo('w2-close')">Look closer</a>
+<a onclick="goTo('w3')">Continue</a>
+</nav>
+
+</div>
+
+
+<div class="group" id="w2-close">
+<p>the dog appears again...</p>
+
+<div class="image-stack">
+<img class="ascii" src="images/w2-close-ascii.png">
+<img class="real" src="images/w2-close.jpg">
+</div>
+
+<nav class="choices">
+<a class="beer-button" onclick="drinkBeer()">Drink a beer</a>
+<a onclick="goTo('w3')">Keep moving</a>
+</nav>
+
+</div>
+
+
+<!-- LINEAR PHASE -->
+<div class="group" id="w3">
+
+<p>hah</p>
+
+<div class="image-stack">
+<img class="ascii" src="images/w3-ascii.png">
+<img class="real" src="images/w3.jpg">
+</div>
+
+
+<nav class="choices">
+<a onclick="goTo('w4')">--->>>>Move😝</a>
+</nav>
+
+</div>
+
+
+<div class="group" id="w4">
+
+<p>I wonder what this is lol</p>
+
+<div class="image-stack">
+<img class="ascii" src="images/w4-ascii.png">
+<img class="real" src="images/w4.jpg">
+</div>
+
+
+<nav class="choices">
+<a onclick="goTo('w5')">Halt!</a>
+</nav>
+
+</div>
+
+
+<div class="group" id="w5">
+
+<p>a melancholic drawing... my favourite kind!</p>
+
+<div class="image-stack">
+<img class="ascii" src="images/w5-ascii.png">
+<img class="real" src="images/w5.jpg">
+</div>
+
+
+<nav class="choices">
+<a onclick="goTo('threshold')">Salute!</a>
+</nav>
+
+</div>
+
+
+
+<div class="group" id="threshold">
+
+<p></p>
+
+<div class="image-stack">
+<img src="images/window.gif">
+</div>
+
+<nav class="choices">
+<a href="war/index.html">LOOK!!!</a>
+</nav>
+
 </div>
 
 <script src="chaotic-good.js"></script>
+
 </body>
 </html>
